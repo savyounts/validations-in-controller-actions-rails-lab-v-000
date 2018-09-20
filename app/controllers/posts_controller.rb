@@ -8,7 +8,7 @@ class PostsController < ApplicationController
   end
 
   def update
-    if @post(params).valid?
+    if params.valid?
       @post.update(post_params)
 
       redirect_to post_path(@post)
